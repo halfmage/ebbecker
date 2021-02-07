@@ -2,17 +2,23 @@
 
 A website I made for a nutrition consultant from germany I wanted to open source since it uses a lot of cool features from the TEA-Stack (TailwindCSS, Eleventy, and AlpineJS). With focus in performance I included the `@11ty/eleventy-img` plugin to give a huge bonus on page build and render time.
 
+- **EleventyJS** for static site generator
+- **TailwindCSS** for styling including a config
+- **AlpineJS** for simple javascript click events
+- **@11ty/eleventy-img** + **sharp** for image optimization
+- **html-minifier** to minify html source code
+
 ### Get started
 
-```
-npm install
-
+```js
+npm install // install dependecies
 npm run build // only first time
-
-npm run start
+npm run start // eleventy magic ✨
 ```
 
 ---
+
+### Thanks
 
 Based on the eleventy-tailwindcss-alpinejs-starter by Greg Wolanski.
 
