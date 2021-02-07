@@ -1,0 +1,179 @@
+---
+title: Termine & Kontakt
+description: Nehmen Sie unkompliziert mit mir via Kontaktformular, Telefon oder E-Mail auf. Egal ob Sie nur eine Frage haben oder direkt einen Termin vereinbaren wollen.
+tags: page
+icon: M20 25c1.4 0 2.5-.5 3.5-1.5a4.9 4.9 0 000-7 4.9 4.9 0 00-7 0 4.9 4.9 0 000 7c1 1 2.2 1.5 3.5 1.5zm0-21.7a16 16 0 0111.8 5A16 16 0 0136.7 20v2.4a6 6 0 01-1.7 4.3 5.7 5.7 0 01-4.2 1.6c-2 0-3.6-.8-4.9-2.5a8 8 0 01-5.9 2.5 8.2 8.2 0 01-8.3-8.3 8.2 8.2 0 018.3-8.3 8.2 8.2 0 018.3 8.3v2.4c0 .7.3 1.3.8 1.8a2.4 2.4 0 003.5 0c.5-.5.7-1.1.7-1.8V20c0-3.6-1.2-6.8-3.9-9.4-2.6-2.6-5.7-4-9.4-4-3.6 0-6.8 1.4-9.4 4-2.6 2.6-4 5.8-4 9.4 0 3.6 1.4 6.8 4 9.4 2.6 2.6 5.8 4 9.4 4h8.3v3.3H20a16 16 0 01-11.7-5 16 16 0 01-5-11.7 16 16 0 015-11.7 16 16 0 0111.7-5z
+color: beratung
+layout: default
+---
+
+{% include "hero-service.njk" %}
+
+<section class="text-gray-700">
+  <div class="container flex flex-wrap px-5 py-16 mx-auto items-start">
+    <div class="lg:w-2/3 lg:pr-32 md:py-8 mb-8">
+      <h1 class="lg:text-4xl text-2xl mb-5 font-extrabold">Formular</h1>
+      <p class="lg:text-xl lg:leading-8 text-lg my-8">
+        Sollten Sie noch weitere Fragen haben oder interessieren Sich für ein
+        bestimmtest Beratungsangebot, dann nehmen Sie einfach Kontakt mit mir
+        auf!
+      </p>
+      <form name="contact" method="POST" data-netlify="true">
+        <p>
+          <label class="block mt-4 font-bold text-gray-600"
+            >Ihr Name
+            <input
+              required
+              type="text"
+              name="Name"
+              class="rounded block w-full border-1 border-gray-300 bg-white py-3 mt-2 focus:ring-4 focus:ring-primary-700 focus:ring-opacity-25 focus:border-primary-500"
+          /></label>
+        </p>
+        <p>
+          <label class="block mt-4 font-bold text-gray-600"
+            >Ihre E-Mail-Adresse:
+            <input
+              required
+              type="email"
+              name="E-Mail-Adresse"
+              class="rounded block w-full border-1 border-gray-300 bg-white py-3 mt-2 focus:ring-4 focus:ring-primary-700 focus:ring-opacity-25 focus:border-primary-500"
+          /></label>
+        </p>
+        <p>
+          <label class="block mt-4 font-bold text-gray-600"
+            >Wofür Interessieren Sie sich:
+            <select
+              required
+              name="Interesse[]"
+              class="rounded block w-full border-1 border-gray-300 bg-white py-3 mt-2 focus:ring-4 focus:ring-primary-700 focus:ring-opacity-25 focus:border-primary-500"
+            >
+              <option value="Terminanfrage">Terminanfrage</option>
+              <option value="Beratung">Ernährungsberatung</option>
+              <option value="Therapie">Ernährungstherapie</option>
+              <option value="Bioelektrische Impedanzanalyse">
+                Bioelektrische Impedanzanalyse
+              </option>
+              <option value="Betriebliche Gesundheitsförderung">
+                Betriebliche Gesundheitsförderung
+              </option>
+            </select></label
+          >
+        </p>
+        <p>
+          <label class="block mt-4 font-bold text-gray-600"
+            >Ihre Nachricht:
+            <textarea
+              required
+              name="Nachricht"
+              class="rounded block w-full border-1 border-gray-300 bg-white py-3 mt-2 focus:ring-4 ring-offset-0 focus:ring-primary-700 focus:ring-opacity-25 focus:border-primary-500"
+            ></textarea>
+          </label>
+        </p>
+        <p>
+          <label for="confirm" class="mt-4 block cursor-pointer">
+            <input
+              type="checkbox"
+              id="confirm"
+              class="rounded text-primary-700 focus:ring-2 focus:ring-primary-700 focus:ring-opacity-50"
+              required
+            />
+            Durch das Absenden des Formulare bestätige ich, dass Frau Ute Becker
+            dazu berechtigt ist mich via E-Mail zu kontaktieren und meine
+            E-Mail-Adresse im Rahmen des Beratungszeitraumes zu speichern.
+          </label>
+        </p>
+        <p>
+          <button
+            type="submit"
+            class="block w-full bg-primary-700 hover:bg-primary-600 transition-colors text-white rounded-full p-4 text-xl mt-8"
+          >
+            Absenden
+          </button>
+        </p>
+      </form>
+    </div>
+    <div
+      class="flex flex-col w-full order-first md:order-2 mb-16 md:mb-0 lg:w-1/3 md:p-8 md:bg-white rounded-lg md:shadow-xl"
+    >
+      <h2 class="lg:text-4xl text-2xl mb-3 font-extrabold">Kontakt</h2>
+      <h3 class="inline-flex mt-8">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="w-8 h-8 mr-4 opacity-75"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
+          />
+        </svg>
+        <div>
+          <p class="font-extrabold text-xl">Telefon</p>
+          <p class="text-xl text-gray-600">+49 (0) 2853 39674</p>
+        </div>
+      </h3>
+
+      <h3 class="inline-flex mt-8">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="w-8 h-8 mr-4 opacity-75"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207"
+          />
+        </svg>
+        <div>
+          <p class="font-extrabold text-xl">E-Mail-Adresse</p>
+          <a
+            href="mailto:info@eb-becker.de"
+            class="text-xl text-gray-600 hover:underline"
+            >info@eb-becker.de</a
+          >
+        </div>
+      </h3>
+
+      <h3 class="inline-flex mt-8">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          class="w-8 h-8 mr-4 opacity-75"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+          />
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+          />
+        </svg>
+        <div>
+          <p class="font-extrabold text-xl">Anfahrt</p>
+          <p class="text-xl text-gray-600">
+            Ute Becker <br />
+            Schlenke 3 <br />
+            46514 Schermbeck
+          </p>
+        </div>
+      </h3>
+    </div>
+  </div>
+</section>
+
+{% include "services.njk" %}
