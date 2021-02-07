@@ -1,4 +1,15 @@
 {
+  "name": "ebbecker",
+  "version": "1.0.0",
+  "description": "Eine professionelle Ernährungsberatung benötigen Sie vielleicht nur einmal im Leben – aber ein Leben lang können Sie davon profitieren.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/halfmage/ebbecker.git"
+  },
+  "author": "@halfmage",
+  "license": "MIT",
+  "homepage": "https://www.eb-becker.de",
   "scripts": {
     "start": "eleventy --serve & postcss styles/tailwind.css --o _tmp/style.css --watch",
     "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss styles/tailwind.css --o _site/style.css && cleancss _site/style.css -o _site/style.css"
