@@ -1,17 +1,20 @@
 <nav
-  class="absolute bg-white right-4 left-4 rounded-lg p-4 pb-2 top-4 shadow-lg text-lg"
+  class="absolute bg-white right-4 left-4 rounded-lg top-4 shadow-lg"
   x-show.transition="menuOpen"
   @click.away="menuOpen = false"
 >
-  <a class="flex items-center rounded p-4" href="/beratung">
+  <a
+    class="flex items-center rounded p-4 border-b border-gray-100"
+    href="/beratung"
+  >
     <div
-      class="bg-beratung-light inline-flex justify-center items-center p-2 rounded mr-4"
+      class="bg-beratung-light inline-flex justify-center items-center p-2 rounded-full mr-4"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 40 40"
-        class="text-beratung w-6 h-6 inline-block"
+        class="text-beratung w-4 h-4 inline-block"
       >
         <defs />
         <path
@@ -22,15 +25,18 @@
     </div>
     Ernährungsberatung</a
   >
-  <a class="flex items-center rounded p-4" href="/therapie">
+  <a
+    class="flex items-center rounded p-4 border-b border-gray-100"
+    href="/therapie"
+  >
     <div
-      class="bg-therapie-light inline-flex justify-center items-center p-2 rounded mr-4"
+      class="bg-therapie-light inline-flex justify-center items-center p-2 rounded-full mr-4"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 40 40"
-        class="text-therapie w-6 h-6 inline-block"
+        class="text-therapie w-4 h-4 inline-block"
       >
         <defs />
         <path
@@ -42,17 +48,17 @@
     Ernährungstherapie</a
   >
   <a
-    class="flex items-center rounded p-4"
+    class="flex items-center rounded p-4 border-b border-gray-100"
     href="/bioelektrische-impedanzanalyse"
   >
     <div
-      class="bg-bia-light inline-flex justify-center items-center p-2 rounded mr-4"
+      class="bg-bia-light inline-flex justify-center items-center p-2 rounded-full mr-4"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 40 40"
-        class="text-bia w-6 h-6 inline-block"
+        class="text-bia w-4 h-4 inline-block"
       >
         <path
           fill="currentColor"
@@ -62,41 +68,46 @@
         />
       </svg>
     </div>
-    Bioelektrische Impedanzanalyse</a
+    BIA-Messung</a
   >
   <a
-    class="flex items-center rounded p-4"
+    class="flex items-center rounded p-4 border-b border-gray-100"
     href="/betriebliche-gesundheitsfoerderung"
   >
     <div
-      class="bg-bgf-light inline-flex justify-center items-center p-2 rounded mr-4"
+      class="bg-bgf-light inline-flex justify-center items-center p-2 rounded-full mr-4"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 40 40"
-        class="text-bgf w-6 h-6 inline-block"
+        class="text-bgf w-4 h-4 inline-block"
       >
-        <defs />
         <path
           fill="currentColor"
           d="M15 31.7h5V21.6l-6.7-5.8-6.6 5.8v10h5V25H15v6.7zM35 35H5a1.7 1.7 0 01-1.7-1.7V20.8a1.7 1.7 0 01.6-1.2l6.1-5.4V6.7A1.7 1.7 0 0111.7 5H35a1.7 1.7 0 011.7 1.7v26.6A1.7 1.7 0 0135 35zm-8.3-16.7v3.4H30v-3.4h-3.3zm0 6.7v3.3H30V25h-3.3zm0-13.3V15H30v-3.3h-3.3zm-6.7 0V15h3.3v-3.3H20z"
         />
       </svg>
     </div>
-    Betriebliche Gesundheitsförderung
+    Betriebl. Gesundheitsförderung
   </a>
-  <a class="block px-4 py-4 focus:outline-none rounded-full" href="/profil"
+  <a
+    class="block p-4 focus:outline-none border-b border-gray-100"
+    href="/profil"
     >Profil</a
   >
-  <a class="block px-4 py-4 focus:outline-none rounded-full" href="/covid-19"
+  <a
+    class="block p-4 focus:outline-none border-b border-gray-100"
+    href="/covid-19"
     >COVID-19</a
   >
-  <a class="block px-4 py-4 focus:outline-none rounded-full" href="/kontakt"
+  <a
+    class="block p-4 focus:outline-none border-b border-gray-100"
+    href="/kontakt"
     >Kontakt & Termine</a
   >
   <div
-    class="px-4 py-5 underline text-center text-xl border-t border-gray-100 cursor-pointer"
+    class="p-4 underline text-center cursor-pointer"
     @click="menuOpen = false"
     tabindex="0"
   >
