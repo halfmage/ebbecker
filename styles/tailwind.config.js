@@ -15,7 +15,7 @@ module.exports = {
       serif: ["Kalam", "sans-sans"],
     },
     colors: {
-      gray: colors.warmGray,
+      gray: colors.gray,
       primary: colors.lime,
       white: white,
       beratung: "#64A30C",
@@ -30,6 +30,10 @@ module.exports = {
       "covid-light": colors.red[200],
     },
   },
-  variants: {},
+  variants: {
+    extend: {
+      display: ["dark"],
+    },
+  },
   plugins: [require("@tailwindcss/forms")],
 };

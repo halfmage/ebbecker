@@ -1,6 +1,6 @@
 <div x-data="{ atTop : true }">
   <header
-    class="text-gray-700 bg-white border-b border-gray-100 fixed top-0 left-0 right-0 transform z-50 transition-all"
+    class="text-gray-700 dark:text-gray-100 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 fixed top-0 left-0 right-0 transform z-50 transition-all"
     :class="{'shadow-lg' : !atTop}"
     @scroll.window="atTop = ( window.pageYOffset > 0 ) ? false : true"
   >
@@ -16,6 +16,14 @@
         <img
           src="/images/logo-dark.svg"
           alt="Ute Becker Ernährungsberatung Logo"
+          class="inline-block dark:hidden"
+          width="170px"
+          height="48px"
+        />
+        <img
+          src="/images/logo-light.svg"
+          alt="Ute Becker Ernährungsberatung Logo"
+          class="hidden dark:inline-block"
           width="170px"
           height="48px"
         />
@@ -43,7 +51,7 @@
       <nav class="hidden md:flex">
         <div class="relative flex flex-row" x-data="{ isOpen: false }">
           <span
-            class="cursor-pointer inline-flex items-center justify-center md:py-1 px-4 py-4 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none rounded-full"
+            class="cursor-pointer inline-flex items-center justify-center md:py-1 px-4 py-4 hover:bg-gray-100 focus:bg-gray-200 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:outline-none rounded-full"
             @click="isOpen = !isOpen"
             tabindex="0"
           >
@@ -60,10 +68,10 @@
           <div
             x-show.transition="isOpen"
             @click.away="isOpen = false"
-            class="w-full md:absolute md:bg-white shadow rounded-lg md:mt-12 md:z-20 md:left-0 md:w-max overflow-hidden"
+            class="w-full md:absolute bg-white dark:bg-gray-800 shadow rounded-lg md:mt-12 md:z-20 md:left-0 md:w-max overflow-hidden"
           >
             <a
-              class="hover:text-beratung flex items-center py-3 border-b border-gray-100 px-4 hover:bg-gray-50"
+              class="hover:text-beratung flex items-center py-3 border-b border-gray-100 dark:border-gray-800 px-4 hover:bg-gray-50 dark:hover:bg-gray-900"
               href="/beratung"
             >
               <div
@@ -84,7 +92,7 @@
               Ernährungsberatung</a
             >
             <a
-              class="hover:text-therapie flex items-center py-3 border-b border-gray-100 px-4 hover:bg-gray-50"
+              class="hover:text-therapie flex items-center py-3 border-b border-gray-100 dark:border-gray-800 px-4 hover:bg-gray-50 dark:hover:bg-gray-900"
               href="/therapie"
             >
               <div
@@ -105,7 +113,7 @@
               Ernährungstherapie</a
             >
             <a
-              class="hover:text-bia flex items-center py-3 border-b border-gray-100 px-4 hover:bg-gray-50"
+              class="hover:text-bia flex items-center py-3 border-b border-gray-100 dark:border-gray-800 px-4 hover:bg-gray-50 dark:hover:bg-gray-900"
               href="/bioelektrische-impedanzanalyse"
             >
               <div
@@ -128,7 +136,7 @@
               Bioelektrische Impedanzanalyse</a
             >
             <a
-              class="hover:text-bgf flex items-center py-3 border-b px-4 hover:bg-gray-50"
+              class="hover:text-bgf flex items-center py-3 border-b border-gray-100 dark:border-gray-800 px-4 hover:bg-gray-50 dark:hover:bg-gray-900"
               href="/betriebliche-gesundheitsfoerderung"
             >
               <div
@@ -152,12 +160,12 @@
           </div>
         </div>
         <a
-          class="md:ml-2 md:py-1 px-4 py-4 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none rounded-full"
+          class="md:ml-2 md:py-1 px-4 py-4 hover:bg-gray-100 focus:bg-gray-200 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:outline-none rounded-full"
           href="/profil"
           >Profil</a
         >
         <a
-          class="md:ml-2 md:py-1 px-4 py-4 hover:bg-gray-100 focus:bg-gray-200 focus:outline-none rounded-full"
+          class="md:ml-2 md:py-1 px-4 py-4 hover:bg-gray-100 focus:bg-gray-200 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:outline-none rounded-full"
           href="/covid-19"
           >COVID-19</a
         >
