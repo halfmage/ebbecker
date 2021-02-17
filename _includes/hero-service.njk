@@ -1,10 +1,10 @@
-<section class="bg-white">
+<section class="bg-white dark:bg-gray-800">
   <div class="container px-5 pt-28 pb-12 lg:pt-32 lg:pb-18 mx-auto">
     <div class="flex flex-col items-center text-center mx-auto">
       <div
-        class="bg-{{
+        class="bg-{{ color }}-light dark:bg-{{
           color
-        }}-light shadow-xl inline-flex justify-center items-center lg:p-4 p-4 rounded-full mb-8 ring-4 ring-offset-4 ring-offset-gray-100 dark:ring-offset-gray-900 ring-opacity-50 ring-{{
+        }} shadow-xl inline-flex justify-center items-center lg:p-4 p-4 rounded-full mb-8 ring-4 ring-offset-4 ring-offset-gray-100 dark:ring-offset-gray-900 ring-opacity-50 ring-{{
           color
         }}"
       >
@@ -12,18 +12,20 @@
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
           viewBox="0 0 40 40"
-          class="text-{{ color }} lg:w-12 w-8 lg:h-12 h-8"
+          class="text-{{ color }} dark:text-white lg:w-12 w-8 lg:h-12 h-8"
         >
           <path fill="currentColor" d="{{ icon }}" />
         </svg>
       </div>
       <h1
-        class="lg:text-5xl text-3xl mb-4 font-extrabold text-gray-800"
+        class="lg:text-5xl text-3xl mb-4 font-extrabold text-gray-800 dark:text-gray-200"
         style="line-height: 1.25"
       >
         {{ title }}
       </h1>
-      <p class="text-lg lg:leading-relaxed lg:max-w-4xl text-gray-600">
+      <p
+        class="text-lg lg:leading-relaxed lg:max-w-4xl text-gray-600 dark:text-gray-500"
+      >
         {{ description }}
       </p>
     </div>
