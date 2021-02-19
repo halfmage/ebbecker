@@ -51,7 +51,7 @@
       <nav class="hidden md:flex">
         <div class="relative flex flex-row" x-data="{ isOpen: false }">
           <span
-            class="cursor-pointer inline-flex items-center justify-center md:py-1 px-4 py-4 hover:bg-gray-100 focus:bg-gray-200 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:outline-none rounded-full"
+            class="cursor-pointer inline-flex items-center justify-center p-2 px-4 hover:bg-gray-100 focus:bg-gray-200 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:outline-none rounded-full"
             @click="isOpen = !isOpen"
             tabindex="0"
           >
@@ -160,20 +160,52 @@
           </div>
         </div>
         <a
-          class="md:ml-2 md:py-1 px-4 py-4 hover:bg-gray-100 focus:bg-gray-200 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:outline-none rounded-full"
+          class="md:ml-1 p-2 px-4 hover:bg-gray-100 focus:bg-gray-200 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:outline-none rounded-full"
           href="/profil"
           >Profil</a
         >
         <a
-          class="md:ml-2 md:py-1 px-4 py-4 hover:bg-gray-100 focus:bg-gray-200 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:outline-none rounded-full"
+          class="md:ml-1 p-2 px-4 hover:bg-gray-100 focus:bg-gray-200 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:outline-none rounded-full"
           href="/covid-19"
           >COVID-19</a
         >
         <a
-          class="md:ml-2 md:py-1 px-4 py-4 border border-primary-700 hover:bg-primary-700 hover:text-white focus:bg-primary-700 focus:text-white focus:outline-none rounded-full"
+          class="md:ml-1 p-2 px-4 border border-primary-700 hover:bg-primary-700 hover:text-white focus:bg-primary-700 focus:text-white focus:outline-none rounded-full"
           href="/kontakt"
           >Termine & Kontakt</a
         >
+        <div
+          id="switchTheme"
+          class="md:ml-1 p-2 cursor-pointer hover:bg-gray-100 focus:bg-gray-200 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:outline-none rounded-full inline-flex items-center justify-center"
+        >
+          <svg
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="text-gray-700 dark:text-gray-200 w-6 h-6 hidden dark:block"
+          >
+            <path
+              d="M12 3v1m0 16v1m8-9h1M4 12H3m2-7l1 1m12 0l1-1m0 14l-1-1M6 18l-1 1m11-7a4 4 0 11-8 0 4 4 0 018 0z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            /></svg
+          ><svg
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            class="text-gray-700 dark:text-gray-200 w-6 h-6 dark:hidden"
+          >
+            <path
+              d="M9.353 3C5.849 4.408 3 7.463 3 11.47A9.53 9.53 0 0012.53 21c4.007 0 7.062-2.849 8.47-6.353C8.17 17.065 8.14 8.14 9.353 3z"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
       </nav>
 
       {% include "mobile-menu.njk" %}
