@@ -23,9 +23,9 @@ const { title, description } = Astro.props;
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
     />
-    <Meta title={title} description={description} />
+    <Meta title={title} description={description} url={Astro.url.pathname} />
     <meta name="author" content="Ute Becker" />
-    <link rel="alternate" hreflang="de" href={meta.url} />
+    <link rel="alternate" hreflang="de" href={new URL(Astro.url.pathname, meta.url).href} />
     <script type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@graph": [
@@ -50,7 +50,11 @@ const { title, description } = Astro.props;
           },
           "description": meta.description,
           "priceRange": "$$",
-          "image": meta.url + "social.png"
+          "image": meta.url + "social.png",
+          "sameAs": [
+            "https://share.google/pBYBA1HKrb5iBi7Ki",
+            "https://www.provenexpert.com/de-de/ute-becker-schermbeck/"
+          ]
         },
         {
           "@type": "Person",
@@ -60,7 +64,11 @@ const { title, description } = Astro.props;
             "@type": "LocalBusiness",
             "name": meta.title
           },
-          "url": meta.url + "profil/"
+          "url": meta.url + "profil/",
+          "sameAs": [
+            "https://www.dge.de/person-detail/ute-becker",
+            "https://www.provenexpert.com/de-de/ute-becker-schermbeck/"
+          ]
         }
       ]
     })} />
@@ -84,9 +92,9 @@ const { title, description } = Astro.props;
         .getElementById("switchTheme")
         .addEventListener("click", function () {
           let htmlClasses = document.querySelector("html").classList;
-          if (localStorage.theme == "dark") {
+          if (htmlClasses.contains("dark")) {
             htmlClasses.remove("dark");
-            localStorage.removeItem("theme");
+            localStorage.theme = "light";
           } else {
             htmlClasses.add("dark");
             localStorage.theme = "dark";

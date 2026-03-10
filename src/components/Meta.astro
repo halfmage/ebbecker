@@ -4,19 +4,22 @@ import meta from '../data/meta.json';
 interface Props {
   title: string;
   description?: string;
+  url: string;
 }
 
-const { title, description } = Astro.props;
+const { title, description, url } = Astro.props;
 const pageDescription = description || meta.description;
+const pageUrl = new URL(url, meta.url).href;
 ---
 
 <meta name="description" content={pageDescription} />
-<link rel="canonical" href={meta.url} />
+<link rel="canonical" href={pageUrl} />
 
+<meta property="og:type" content="website" />
 <meta property="og:site_name" content={meta.title} />
-<meta property="og:title" content={`${meta.title} - ${title}`} />
+<meta property="og:title" content={`${title} - ${meta.title}`} />
 <meta property="og:description" content={pageDescription} />
-<meta property="og:url" content={meta.url} />
+<meta property="og:url" content={pageUrl} />
 <meta property="og:locale" content={meta.locale} />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="og:image" content={`${meta.url}social.png`} />

@@ -1,0 +1,64 @@
+---
+const faqs = [
+  {
+    question: "Für wen ist eine Ernährungsberatung sinnvoll?",
+    answer: "Eine Ernährungsberatung eignet sich für alle, die ihre Ernährung verbessern möchten – ob zur Vorbeugung, bei Übergewicht, während der Schwangerschaft, für Kinder und Säuglinge, Sportler oder Senioren. Auch Unternehmen profitieren von betrieblicher Gesundheitsförderung."
+  },
+  {
+    question: "Was ist der Unterschied zwischen Ernährungsberatung und Ernährungstherapie?",
+    answer: "Ernährungsberatung ist präventiv und richtet sich an gesunde Menschen, die ihre Ernährung optimieren wollen. Ernährungstherapie begleitet dagegen eine ärztliche Behandlung bei Erkrankungen wie Diabetes, Allergien, Zöliakie oder Adipositas und wird häufig von der Krankenkasse bezuschusst."
+  },
+  {
+    question: "Werden die Kosten von der Krankenkasse übernommen?",
+    answer: "Viele gesetzliche Krankenkassen bezuschussen eine Ernährungsberatung oder -therapie durch eine zertifizierte Fachkraft. Als DGE-zertifizierte Diätassistentin erfülle ich die Voraussetzungen für eine Kostenübernahme. Bitte klären Sie die Details vorab mit Ihrer Krankenkasse."
+  },
+  {
+    question: "Was ist eine Bioelektrische Impedanzanalyse (BIA)?",
+    answer: "Die BIA ist ein schmerzfreies Messverfahren, das Ihre Körperzusammensetzung analysiert – also den Anteil von Muskelmasse, Fettmasse und Körperwasser. Die Ergebnisse helfen dabei, Ihre Ernährung gezielt anzupassen und Fortschritte sichtbar zu machen."
+  },
+  {
+    question: "Wie läuft eine Ernährungsberatung ab?",
+    answer: "In einem ersten Gespräch erfasse ich Ihre Ernährungsgewohnheiten, gesundheitliche Situation und persönliche Ziele. Darauf aufbauend erstelle ich individuelle Empfehlungen. In Folgeterminen begleite ich Sie bei der Umsetzung und passe den Plan bei Bedarf an."
+  },
+  {
+    question: "Bieten Sie auch Beratung für Unternehmen an?",
+    answer: "Ja, im Rahmen der betrieblichen Gesundheitsförderung biete ich Ernährungsberatung, Vorträge, Kochworkshops und Präventionskurse für Unternehmen an. Ich bin JobFood-zertifiziert und unterstütze Firmen dabei, die Gesundheit ihrer Mitarbeiter nachhaltig zu fördern."
+  }
+];
+---
+
+<section class="bg-white dark:bg-gray-800" id="faq">
+  <div class="max-w-3xl px-5 py-16 mx-auto">
+    <h2 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100 mb-2 text-center">
+      Häufig gestellte Fragen
+    </h2>
+    <p class="text-gray-600 dark:text-gray-400 text-center mb-12">
+      Antworten auf die wichtigsten Fragen rund um Ernährungsberatung und -therapie.
+    </p>
+    <dl class="space-y-6">
+      {faqs.map((faq) => (
+        <div class="border-b border-gray-200 dark:border-gray-700 pb-6">
+          <dt class="text-lg font-bold text-gray-800 dark:text-gray-200 mb-2">
+            {faq.question}
+          </dt>
+          <dd class="text-gray-600 dark:text-gray-400 leading-relaxed">
+            {faq.answer}
+          </dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer
+    }
+  }))
+})} />
