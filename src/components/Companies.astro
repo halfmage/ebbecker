@@ -1,0 +1,54 @@
+---
+import { Image } from 'astro:assets';
+import avdLight from '../assets/images/avd-light.png';
+import avdDark from '../assets/images/avd-dark.png';
+import dspLight from '../assets/images/dsp-light.png';
+import dspDark from '../assets/images/dsp-dark.png';
+import daabLight from '../assets/images/daab-light.png';
+import daabDark from '../assets/images/daab-dark.png';
+import dzgLight from '../assets/images/dzg-light.png';
+import dzgDark from '../assets/images/dzg-dark.png';
+import iccompanyLight from '../assets/images/iccompany-light.png';
+import iccompanyDark from '../assets/images/iccompany-dark.png';
+import vddLight from '../assets/images/vdd-light.png';
+import vddDark from '../assets/images/vdd-dark.png';
+
+const companies = [
+  { light: avdLight, dark: avdDark, name: 'AVD' },
+  { light: dspLight, dark: dspDark, name: 'DSP' },
+  { light: daabLight, dark: daabDark, name: 'DAAB' },
+  { light: dzgLight, dark: dzgDark, name: 'DZG' },
+  { light: iccompanyLight, dark: iccompanyDark, name: 'IC Company' },
+  { light: vddLight, dark: vddDark, name: 'VDD' },
+];
+---
+
+<section class="md:py-16 py-8 bg-white dark:bg-gray-800 mb-8">
+  <div class="flex flex-col text-center w-full mb-8">
+    <h1 class="text-xl text-gray-800 dark:text-gray-200 mb-2">
+      Kooperationen & Mitgliedschaften
+    </h1>
+  </div>
+  <div class="max-w-screen-lg mx-auto flex flex-wrap justify-between">
+    {companies.map((company) => (
+      <Fragment>
+        <div class="w-2/6 sm:w-1/6 py-2 px-4 flex justify-center items-center dark:hidden">
+          <Image
+            src={company.light}
+            alt={company.name}
+            class="object-contain object-center max-h-12 opacity-75"
+            loading="lazy"
+          />
+        </div>
+        <div class="w-2/6 sm:w-1/6 py-2 px-4 justify-center items-center hidden dark:flex">
+          <Image
+            src={company.dark}
+            alt={company.name}
+            class="object-contain object-center max-h-12 opacity-75"
+            loading="lazy"
+          />
+        </div>
+      </Fragment>
+    ))}
+  </div>
+</section>

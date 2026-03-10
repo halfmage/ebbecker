@@ -1,8 +1,7 @@
 {
   "name": "ebbecker",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Eine professionelle Ernährungsberatung benötigen Sie vielleicht nur einmal im Leben – aber ein Leben lang können Sie davon profitieren.",
-  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/halfmage/ebbecker.git"
@@ -11,22 +10,18 @@
   "license": "MIT",
   "homepage": "https://www.eb-becker.de",
   "scripts": {
-    "start": "eleventy --serve & postcss styles/tailwind.css --o _tmp/style.css --watch",
-    "build": "ELEVENTY_PRODUCTION=true eleventy && NODE_ENV=production postcss styles/tailwind.css --o _site/style.css && cleancss _site/style.css -o _site/style.css"
-  },
-  "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "alpinejs": "^2.7.3",
-    "autoprefixer": "^10.0.2",
-    "clean-css-cli": "^4.3.0",
-    "html-minifier": "^4.0.0",
-    "postcss": "^8.1.10",
-    "postcss-cli": "^8.3.0",
-    "tailwindcss": "^2.0.1"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^0.3.0",
-    "@tailwindcss/forms": "^0.2.1",
-    "sharp": "^0.26.3"
+    "@astrojs/alpinejs": "^0.4.0",
+    "@astrojs/sitemap": "^3.2.1",
+    "@tailwindcss/forms": "^0.5.9",
+    "@tailwindcss/vite": "^4.0.0",
+    "alpinejs": "^3.14.0",
+    "astro": "^5.5.0",
+    "sharp": "^0.33.0",
+    "tailwindcss": "^4.0.0"
   }
 }

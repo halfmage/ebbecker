@@ -1,0 +1,100 @@
+---
+import '../styles/global.css';
+import Meta from '../components/Meta.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import meta from '../data/meta.json';
+
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title} - {meta.title}</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
+    />
+    <Meta title={title} description={description} />
+    <meta name="author" content="Ute Becker" />
+    <link rel="alternate" hreflang="de" href={meta.url} />
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "name": meta.title,
+          "url": meta.url,
+          "inLanguage": "de"
+        },
+        {
+          "@type": "LocalBusiness",
+          "name": meta.title,
+          "url": meta.url,
+          "telephone": "+49 2853 39674",
+          "email": "info@eb-becker.de",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Schlenke 3",
+            "addressLocality": "Schermbeck",
+            "postalCode": "46514",
+            "addressCountry": "DE"
+          },
+          "description": meta.description,
+          "priceRange": "$$",
+          "image": meta.url + "social.png"
+        },
+        {
+          "@type": "Person",
+          "name": "Ute Becker",
+          "jobTitle": "Diätassistentin, Ernährungsberaterin / DGE",
+          "worksFor": {
+            "@type": "LocalBusiness",
+            "name": meta.title
+          },
+          "url": meta.url + "profil/"
+        }
+      ]
+    })} />
+    <script is:inline>
+      if (
+        localStorage.theme === "dark" ||
+        (!("theme" in localStorage) &&
+          window.matchMedia("(prefers-color-scheme: dark)").matches)
+      ) {
+        document.documentElement.classList.add("dark");
+      }
+    </script>
+  </head>
+  <body class="bg-gray-50 dark:bg-gray-900 font-sans">
+    <Header />
+    <slot />
+    <Footer />
+
+    <script is:inline>
+      document
+        .getElementById("switchTheme")
+        .addEventListener("click", function () {
+          let htmlClasses = document.querySelector("html").classList;
+          if (localStorage.theme == "dark") {
+            htmlClasses.remove("dark");
+            localStorage.removeItem("theme");
+          } else {
+            htmlClasses.add("dark");
+            localStorage.theme = "dark";
+          }
+        });
+    </script>
+
+    <script is:inline async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+    <noscript><img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" /></noscript>
+  </body>
+</html>

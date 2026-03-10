@@ -1,7 +1,11 @@
+---
+---
+
 <nav
   class="absolute bg-white dark:bg-gray-900 right-4 left-4 rounded-lg top-4 shadow-lg"
-  x-show.transition="menuOpen"
-  @click.away="menuOpen = false"
+  x-show="menuOpen"
+  x-transition
+  @click.outside="menuOpen = false"
 >
   <a
     class="flex items-center py-3 p-4 border-b border-gray-100 dark:border-gray-800"
@@ -16,7 +20,6 @@
         viewBox="0 0 40 40"
         class="text-beratung w-4 h-4 inline-block"
       >
-        <defs />
         <path
           fill="currentColor"
           d="M33.3 16.7c3.4 5-5 20-8.3 20-3.3 0-3.3-1.7-5-1.7-1.7 0-1.7 1.7-5 1.7s-11.7-15-8.3-20c3.3-5 8.3-5 11.6-3.4v-5c-9.3 5.1-11.5-2-11.5-2s4.5-6 11.5 2V5h3.4v8.3a8.8 8.8 0 0111.6 3.4z"
@@ -38,7 +41,6 @@
         viewBox="0 0 40 40"
         class="text-therapie w-4 h-4 inline-block"
       >
-        <defs />
         <path
           fill="currentColor"
           d="M18.3 3.3A13.3 13.3 0 0131.6 15l3.7 6c.3.3.2 1-.4 1.2l-3.2 1.3v5a3.3 3.3 0 01-3.4 3.3H25v5H10v-6.2c0-2-.7-3.8-2-5.5A13.3 13.3 0 0118.2 3.3zm0 8.4a1.7 1.7 0 00-1.6 1.6V15H15a1.7 1.7 0 000 3.3h1.7V20a1.7 1.7 0 003.3 0v-1.7h1.7a1.7 1.7 0 000-3.3H20v-1.7a1.7 1.7 0 00-1.7-1.6z"
@@ -95,11 +97,6 @@
     class="block py-3 p-4 focus:outline-none border-b border-gray-100 dark:border-gray-800"
     href="/profil"
     >Profil</a
-  >
-  <a
-    class="block py-3 p-4 focus:outline-none border-b border-gray-100 dark:border-gray-800"
-    href="/covid-19"
-    >COVID-19</a
   >
   <a
     class="block py-3 p-4 focus:outline-none border-b border-gray-100 dark:border-gray-800"

@@ -1,3 +1,7 @@
+---
+import MobileMenu from './MobileMenu.astro';
+---
+
 <div x-data="{ atTop : true }">
   <header
     class="text-gray-700 dark:text-gray-100 fixed top-0 left-0 right-0 dark:bg-gray-900 transform z-50 transition-all"
@@ -17,18 +21,18 @@
           src="/images/logo-dark.svg"
           alt="Ute Becker Ernährungsberatung Logo"
           class="inline-block dark:hidden"
-          width="170px"
-          height="48px"
+          width="170"
+          height="48"
         />
         <img
           src="/images/logo-light.svg"
           alt="Ute Becker Ernährungsberatung Logo"
           class="hidden dark:inline-block"
-          width="170px"
-          height="48px"
+          width="170"
+          height="48"
         />
       </a>
-      <!-- Mobile menu trigger start -->
+      <!-- Mobile menu trigger -->
       <div
         class="md:hidden cursor-pointer p-2 focus:text-primary-500 focus:outline-none"
         @click="menuOpen = !menuOpen"
@@ -46,7 +50,6 @@
           />
         </svg>
       </div>
-      <!-- Mobile menu trigger end -->
 
       <nav class="hidden md:flex">
         <div class="relative flex flex-row" x-data="{ isOpen: false }">
@@ -66,8 +69,9 @@
             </svg>
           </span>
           <div
-            x-show.transition="isOpen"
-            @click.away="isOpen = false"
+            x-show="isOpen"
+            x-transition
+            @click.outside="isOpen = false"
             class="w-full md:absolute bg-white dark:bg-gray-800 shadow rounded-lg md:mt-12 md:z-20 md:left-0 md:w-max overflow-hidden"
           >
             <a
@@ -148,7 +152,6 @@
                   viewBox="0 0 40 40"
                   class="text-bgf dark:text-white w-6 h-6 inline-block"
                 >
-                  <defs />
                   <path
                     fill="currentColor"
                     d="M15 31.7h5V21.6l-6.7-5.8-6.6 5.8v10h5V25H15v6.7zM35 35H5a1.7 1.7 0 01-1.7-1.7V20.8a1.7 1.7 0 01.6-1.2l6.1-5.4V6.7A1.7 1.7 0 0111.7 5H35a1.7 1.7 0 011.7 1.7v26.6A1.7 1.7 0 0135 35zm-8.3-16.7v3.4H30v-3.4h-3.3zm0 6.7v3.3H30V25h-3.3zm0-13.3V15H30v-3.3h-3.3zm-6.7 0V15h3.3v-3.3H20z"
@@ -163,11 +166,6 @@
           class="md:ml-1 p-2 px-4 hover:bg-gray-100 focus:bg-gray-200 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:outline-none rounded-full"
           href="/profil"
           >Profil</a
-        >
-        <a
-          class="md:ml-1 p-2 px-4 hover:bg-gray-100 focus:bg-gray-200 dark:hover:bg-gray-800 dark:focus:bg-gray-800 focus:outline-none rounded-full"
-          href="/covid-19"
-          >COVID-19</a
         >
         <a
           class="md:ml-1 p-2 px-4 border border-primary-700 hover:bg-primary-700 hover:text-white focus:bg-primary-700 focus:text-white focus:outline-none rounded-full"
@@ -208,7 +206,7 @@
         </div>
       </nav>
 
-      {% include "mobile-menu.njk" %}
+      <MobileMenu />
     </div>
   </header>
 </div>

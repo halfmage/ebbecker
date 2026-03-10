@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/forms";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-beratung: #64A30C;
+  --color-beratung-light: #C4EF87;
+  --color-therapie: #8B5CF6;
+  --color-therapie-light: #DDD6FF;
+  --color-bia: #F49E0B;
+  --color-bia-light: #FDE689;
+  --color-bgf: #2563EA;
+  --color-bgf-light: #DBEAFF;
+  --color-primary-50: #f7fee7;
+  --color-primary-100: #ecfccb;
+  --color-primary-200: #d9f99d;
+  --color-primary-300: #bef264;
+  --color-primary-400: #a3e635;
+  --color-primary-500: #84cc16;
+  --color-primary-600: #65a30d;
+  --color-primary-700: #4d7c0f;
+  --color-primary-800: #3f6212;
+  --color-primary-900: #365314;
+
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+
+  --color-white: #ffffff;
+
+  --font-sans: "Work Sans", sans-serif;
+  --font-serif: "Kalam", cursive;
+}
+
+/* work-sans-regular - latin */
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/work-sans-v8-latin-regular.woff2") format("woff2"),
+    url("/fonts/work-sans-v8-latin-regular.woff") format("woff");
+  font-display: swap;
+}
+/* work-sans-800 - latin */
+@font-face {
+  font-family: "Work Sans";
+  font-style: normal;
+  font-weight: 800;
+  src: url("/fonts/work-sans-v8-latin-800.woff2") format("woff2"),
+    url("/fonts/work-sans-v8-latin-800.woff") format("woff");
+  font-display: swap;
+}
+/* kalam-regular - latin */
+@font-face {
+  font-family: "Kalam";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/kalam-v11-latin-regular.woff2") format("woff2"),
+    url("/fonts/kalam-v11-latin-regular.woff") format("woff");
+  font-display: swap;
+}
+/* kalam-700 - latin */
+@font-face {
+  font-family: "Kalam";
+  font-style: normal;
+  font-weight: 700;
+  src: url("/fonts/kalam-v11-latin-700.woff2") format("woff2"),
+    url("/fonts/kalam-v11-latin-700.woff") format("woff");
+  font-display: swap;
+}
+
+a[href^="http"] {
+  word-break: break-all;
+}

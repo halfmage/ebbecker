@@ -1,3 +1,8 @@
+---
+import { Image } from 'astro:assets';
+import heroImage from '../assets/images/UteBeckerProfile02.jpg';
+---
+
 <section class="bg-white dark:bg-gray-900">
   <div
     class="container mx-auto flex pb-8 pt-24 px-5 md:pt-32 md:pb-16 lg:pb-24 md:flex-row flex-col items-center"
@@ -76,8 +81,14 @@
       </div>
     </div>
     <div class="lg:w-1/3 md:w-1/3 w-3/6 order-first md:order-1">
-      {% Image "images/UteBeckerProfile02.jpg", "hero", "object-cover
-      object-center rounded-full shadow-2xl" %}
+      <Image
+        src={heroImage}
+        alt="Ute Becker, Ernährungsberaterin in Schermbeck"
+        class="object-cover object-center rounded-full shadow-2xl"
+        widths={[300, 600, 900, 1200]}
+        sizes="(min-width: 1024px) 33vw, (min-width: 768px) 33vw, 50vw"
+        loading="eager"
+      />
     </div>
   </div>
 </section>
