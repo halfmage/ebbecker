@@ -1,6 +1,7 @@
 ---
 import Default from '../layouts/Default.astro';
 import HeroService from '../components/HeroService.astro';
+import Testimonials from '../components/Testimonials.astro';
 import Services from '../components/Services.astro';
 import { Image } from 'astro:assets';
 import beratungsraum01 from '../assets/images/beratungsraum01.jpg';
@@ -10,27 +11,41 @@ const color = 'beratung';
 const icon = 'M33.3 16.7c3.4 5-5 20-8.3 20-3.3 0-3.3-1.7-5-1.7-1.7 0-1.7 1.7-5 1.7s-11.7-15-8.3-20c3.3-5 8.3-5 11.6-3.4v-5c-9.3 5.1-11.5-2-11.5-2s4.5-6 11.5 2V5h3.4v8.3a8.8 8.8 0 0111.6 3.4z';
 ---
 
-<Default title="Beratung" description="Ernährungsberatung in Schermbeck mit Ute Becker. Ein Ernährungscheck hilft Ihnen, Lebenssituationen durch gesunde Ernährung positiv zu beeinflussen.">
-  <HeroService color={color} title="Beratung" icon={icon} description="Ein allgemeiner Ernährungsscheck kann Ihnen helfen Lebenssituationen durch gesunde Ernährung positiv zu beeinflussen." />
+<Default title="Beratung" description="Ernährungsberatung in Schermbeck mit Ute Becker. Vorbeugung, gesundes Gewicht und Ernährung in besonderen Lebensphasen – persönlich und DGE-zertifiziert.">
+  <HeroService color={color} title="Ernährungsberatung" icon={icon} description="Ein allgemeiner Ernährungscheck hilft Ihnen, Lebenssituationen durch gesunde Ernährung positiv zu beeinflussen." />
 
   <section class="text-gray-700 dark:text-gray-300">
     <div class="container flex flex-wrap px-5 py-16 mx-auto items-start">
       <div class="lg:w-2/3 lg:pr-32 md:py-8 mb-8">
-        <h1 class="lg:text-4xl text-2xl font-extrabold">
+        <h2 class="lg:text-4xl text-2xl font-extrabold">
           Worum geht es bei einer Ernährungsberatung?
-        </h1>
+        </h2>
         <p class="lg:text-xl lg:leading-8 text-lg my-8">
-          Diese Leistung richtet sich an Patienten, deren Erkrankung durch eine
-          Ernährungsumstellung günstig beeinflusst werden kann. Sie stellt eine
-          wesentliche Ergänzung zur ärztlichen Therapie dar.
+          Eine Ernährungsberatung dient in erster Linie der Vorbeugung. Sie
+          richtet sich an gesunde Menschen, die ihre Ernährung bewusst gestalten
+          möchten – aus eigenem Antrieb oder weil eine bestimmte Lebensphase neue
+          Fragen aufwirft, etwa in der Schwangerschaft, im Kindes- und
+          Jugendalter, im höheren Alter, bei sportlicher Belastung oder bei
+          Schichtarbeit. Ziel ist es, einer Mangel- oder Fehlernährung
+          vorzubeugen, ein gesundes Körpergewicht zu erreichen und wieder
+          Sicherheit und Freude beim Essen zu gewinnen.
         </p>
+
+        <h3 class="lg:text-2xl text-xl font-extrabold mb-3 mt-10">
+          So läuft eine Beratung bei mir ab
+        </h3>
         <p class="text-lg">
-          Im Rahmen der Ernährungsberatung erfolgt neben einer sorgfältigen
-          Ernährungsanamnese auch eine professionelle Nährwertanalyse auf der
-          Basis Ihres Ernährungsprotokolls. An Hand dieser Ergebnisse sind
-          konkrete Aussagen möglich hinsichtlich Ihrer Nährstoffversorgung und den
-          Veränderungsmöglichkeiten Ihres Essverhaltens.
+          Am Anfang steht ein ausführliches Gespräch: Ich erfasse Ihre
+          Ernährungsgewohnheiten, Ihre gesundheitliche Situation und Ihre
+          persönlichen Ziele. Auf dieser Grundlage – und wenn gewünscht ergänzt
+          durch eine professionelle Nährwertanalyse Ihres Ernährungsprotokolls –
+          erstelle ich konkrete, alltagstaugliche Empfehlungen. Keine starren
+          Diätpläne, sondern Schritte, die zu Ihrem Leben passen. In
+          Folgeterminen begleite ich Sie bei der Umsetzung und passe die
+          Empfehlungen an. Gerade in Abschnitten, die nicht ganz nach Plan
+          verlaufen, ist diese Begleitung erfahrungsgemäß am wertvollsten.
         </p>
+
         <div class="flex my-8 -mx-4">
           <div class="px-4">
             <Image src={beratungsraum01} alt="Beratungsraum für Ernährungsberatung in Schermbeck" class="rounded object-cover object-center" widths={[300, 600]} sizes="(min-width: 1024px) 300px, 50vw" loading="lazy" />
@@ -39,26 +54,54 @@ const icon = 'M33.3 16.7c3.4 5-5 20-8.3 20-3.3 0-3.3-1.7-5-1.7-1.7 0-1.7 1.7-5 1
             <Image src={beratungsraum02} alt="Beratungsraum für Ernährungsberatung in Schermbeck" class="rounded object-cover object-center" widths={[300, 600]} sizes="(min-width: 1024px) 300px, 50vw" loading="lazy" />
           </div>
         </div>
+
+        <h3 class="lg:text-2xl text-xl font-extrabold mb-3 mt-10">
+          Worin unterscheidet sich die Ernährungstherapie?
+        </h3>
         <p class="text-lg">
-          Ich biete ebenfalls Beratungen im Rahmen des
-          <a
-            class="underline text-primary-700"
-            href="/betriebliche-gesundheitsfoerderung"
-            >Betrieblichen Gesundheitsmanagement</a
-          >, Fachvorträge oder auch Seminare und Projekte zum Thema Gesundheit und
-          Wohlbefinden.
+          Beide Angebote drehen sich um das Thema Ernährung und haben das Ziel,
+          Gesundheit zu erhalten oder zu verbessern. Während sich die
+          Ernährungsberatung an gesunde Menschen richtet, unterstützt die
+          <a class="underline text-primary-700" href="/therapie">Ernährungstherapie</a>
+          Menschen mit einer ernährungsbedingten Erkrankung. In der Praxis lassen
+          sich beide nicht immer scharf voneinander trennen – entscheidend ist,
+          dass die Begleitung zu Ihrer persönlichen Situation passt.
+        </p>
+
+        <h3 class="lg:text-2xl text-xl font-extrabold mb-3 mt-10">
+          Übernimmt die Krankenkasse die Kosten?
+        </h3>
+        <p class="text-lg">
+          Eine Ernährungsberatung kann grundsätzlich jeder in Anspruch nehmen;
+          eine ärztliche Empfehlung ist dafür nicht nötig. Viele gesetzliche
+          Krankenkassen beteiligen sich an den Kosten, wenn die Beratung der
+          Prävention dient und von einer qualifizierten Fachkraft durchgeführt
+          wird. Als DGE-zertifizierte Diätassistentin erfülle ich diese
+          Voraussetzungen. Wie hoch der Zuschuss ausfällt, legt Ihre
+          Krankenkasse fest – meist reichen Sie dafür im Anschluss die Rechnung
+          und eine Teilnahmebescheinigung ein. Klären Sie die Details am besten
+          vorab mit Ihrer Kasse.
+        </p>
+
+        <p class="text-lg mt-8">
+          Ich biete die Ernährungsberatung als persönliche Einzelberatung, in
+          Präventionskursen sowie im Rahmen der
+          <a class="underline text-primary-700" href="/betriebliche-gesundheitsfoerderung">Betrieblichen Gesundheitsförderung</a>
+          an. Ergänzend kann eine
+          <a class="underline text-primary-700" href="/bioelektrische-impedanzanalyse">Bioelektrische Impedanzanalyse</a>
+          Ihren Ernährungszustand sichtbar machen.
         </p>
       </div>
       <div
         class="flex flex-col w-full lg:w-1/3 p-4 md:p-8 bg-white dark:bg-gray-800 dark:text-gray-300 rounded-lg shadow-xl"
       >
         <h2 class="lg:text-4xl text-2xl mb-5 font-extrabold">
-          Wem oder Wann kann eine Beratung Ihnen helfen?
+          Wann kann eine Beratung Ihnen helfen?
         </h2>
         <ul>
           <li class="flex items-center mb-4">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="flex-none w-6 h-6 mr-4">
-              <path fill="#87B645" d="M12 13H4v-2h8V4l8 8-8 8v-7z" /></svg
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="flex-none w-6 h-6 mr-4 text-beratung">
+              <path fill="currentColor" d="M12 13H4v-2h8V4l8 8-8 8v-7z" /></svg
             >Säuglinge und Kleinkinder
           </li>
           <li class="flex items-center mb-4">
@@ -91,6 +134,8 @@ const icon = 'M33.3 16.7c3.4 5-5 20-8.3 20-3.3 0-3.3-1.7-5-1.7-1.7 0-1.7 1.7-5 1
       </div>
     </div>
   </section>
+
+  <Testimonials />
 
   <Services />
 </Default>

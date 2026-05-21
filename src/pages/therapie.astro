@@ -1,6 +1,7 @@
 ---
 import Default from '../layouts/Default.astro';
 import HeroService from '../components/HeroService.astro';
+import Testimonials from '../components/Testimonials.astro';
 import Services from '../components/Services.astro';
 import { Image } from 'astro:assets';
 import beratungsraum03 from '../assets/images/beratungsraum03.jpg';
@@ -10,83 +11,140 @@ const color = 'therapie';
 const icon = 'M18.3 3.3A13.3 13.3 0 0131.6 15l3.7 6c.3.3.2 1-.4 1.2l-3.2 1.3v5a3.3 3.3 0 01-3.4 3.3H25v5H10v-6.2c0-2-.7-3.8-2-5.5A13.3 13.3 0 0118.2 3.3zm0 8.4a1.7 1.7 0 00-1.6 1.6V15H15a1.7 1.7 0 000 3.3h1.7V20a1.7 1.7 0 003.3 0v-1.7h1.7a1.7 1.7 0 000-3.3H20v-1.7a1.7 1.7 0 00-1.7-1.6z';
 ---
 
-<Default title="Ernährungstherapie" description="Ernährungstherapie in Schermbeck mit Ute Becker. Eine gezielte Ernährungsumstellung ergänzt die ärztliche Therapie und unterstützt Ihren Heilungsprozess.">
+<Default title="Ernährungstherapie" description="Ernährungstherapie in Schermbeck mit Ute Becker. Begleitung bei Diabetes, Adipositas, Allergien & weiteren Erkrankungen – ergänzend zur ärztlichen Behandlung.">
   <HeroService color={color} title="Ernährungstherapie" icon={icon} description="Eine Ernährungsumstellung ist eine wesentliche Ergänzung zur ärztlichen Therapie und beeinflusst den Heilungsprozess positiv." />
 
   <section class="text-gray-700 dark:text-gray-300">
     <div class="container flex flex-wrap px-5 py-16 mx-auto items-start">
       <div class="lg:w-2/3 lg:pr-32 md:py-8 mb-8">
-        <h1 class="lg:text-4xl text-2xl mb-5 font-extrabold">
+        <h2 class="lg:text-4xl text-2xl font-extrabold">
           Worum geht es bei einer Ernährungstherapie?
-        </h1>
+        </h2>
         <p class="lg:text-xl lg:leading-8 text-lg my-8">
-          Diese Leistung richtet sich an Patienten, deren Erkrankung durch eine
-          Ernährungsumstellung günstig beeinflusst werden kann. Sie stellt eine
-          wesentliche Ergänzung zur ärztlichen Therapie dar.
+          Eine Ernährungstherapie richtet sich an Menschen mit einer
+          ernährungsbedingten Erkrankung. Sie ergänzt die ärztliche Behandlung,
+          lindert krankheitsbedingte Ernährungsprobleme und unterstützt Sie
+          dabei, Essgewohnheiten dauerhaft umzustellen. Eine gezielte
+          Ernährungsumstellung kann den Verlauf vieler Erkrankungen spürbar
+          positiv beeinflussen – von Diabetes über Adipositas bis hin zu
+          Lebensmittelunverträglichkeiten.
         </p>
-        <p class="text-lg mb-8">
-          Im Rahmen der Ernährungsberatung erfolgt neben einer sorgfältigen
-          Ernährungsanamnese auch eine professionelle Nährwertanalyse auf der
-          Basis Ihres Ernährungsprotokolls. An Hand dieser Ergebnisse sind
-          konkrete Aussagen möglich hinsichtlich Ihrer Nährstoffversorgung und den
-          Veränderungsmöglichkeiten Ihres Essverhaltens.
+
+        <h3 class="lg:text-2xl text-xl font-extrabold mb-3 mt-10">
+          Was eine Ernährungstherapie bewirken kann
+        </h3>
+        <p class="text-lg">
+          Ziel der Ernährungstherapie ist es, die Grunderkrankung positiv zu
+          beeinflussen und ihr Fortschreiten zu verlangsamen oder aufzuhalten.
+          Eine Therapie kann helfen, Beschwerden zu lindern und den Bedarf an
+          Medikamenten zu verringern. Vor allem aber begleitet sie Sie dabei,
+          neue Ess- und Trinkgewohnheiten zu finden und sie fest in Ihren Alltag
+          zu integrieren. Bei bestimmten angeborenen Stoffwechselerkrankungen wie
+          Phenylketonurie oder Mukoviszidose ist eine besondere Ernährung sogar
+          zwingend notwendig.
         </p>
+
         <div class="flex my-8 -mx-4">
           <div class="px-4">
-            <Image src={beratungsraum03} alt="Praxisraum für Ernährungstherapie" class="rounded object-cover object-center" widths={[300, 600]} sizes="(min-width: 1024px) 300px, 50vw" loading="lazy" />
+            <Image src={beratungsraum03} alt="Praxisraum für Ernährungstherapie in Schermbeck" class="rounded object-cover object-center" widths={[300, 600]} sizes="(min-width: 1024px) 300px, 50vw" loading="lazy" />
           </div>
           <div class="px-4">
-            <Image src={beratungsraum04} alt="Praxisraum für Ernährungstherapie" class="rounded object-cover object-center" widths={[300, 600]} sizes="(min-width: 1024px) 300px, 50vw" loading="lazy" />
+            <Image src={beratungsraum04} alt="Praxisraum für Ernährungstherapie in Schermbeck" class="rounded object-cover object-center" widths={[300, 600]} sizes="(min-width: 1024px) 300px, 50vw" loading="lazy" />
           </div>
         </div>
+
+        <h3 class="lg:text-2xl text-xl font-extrabold mb-3 mt-10">
+          So gehen wir gemeinsam vor
+        </h3>
         <p class="text-lg">
-          Ich biete ebenfalls Beratungen im Rahmen des Betrieblichen
-          Gesundheitsmanagement, Fachvorträge oder auch Seminare und Projekte zum
-          Thema Gesundheit und Wohlbefinden.
+          Zunächst klären wir Ihr persönliches Anliegen und formulieren gemeinsam
+          ein konkretes Therapieziel. Es folgt eine sorgfältige
+          Ernährungsanamnese sowie – auf Basis Ihres Ernährungsprotokolls – eine
+          professionelle Nährwertanalyse. Daraus leite ich konkrete Aussagen zu
+          Ihrer Nährstoffversorgung ab und bespreche mit Ihnen die sinnvollen
+          oder notwendigen Maßnahmen. Anschließend begleite ich Sie Schritt für
+          Schritt bei der Umstellung. Die Ernährungstherapie biete ich als
+          Einzeltermin oder in kleinen Gruppen mit bis zu fünf Personen an.
+        </p>
+
+        <h3 class="lg:text-2xl text-xl font-extrabold mb-3 mt-10">
+          Übernimmt die Krankenkasse die Kosten?
+        </h3>
+        <p class="text-lg">
+          Anders als die präventive
+          <a class="underline text-primary-700" href="/beratung">Ernährungsberatung</a>
+          ist die Ernährungstherapie keine reguläre Kassenleistung. Viele
+          Krankenkassen beteiligen sich jedoch auf Antrag an den Kosten. Dafür
+          benötigen Sie in der Regel eine ärztliche Notwendigkeitsbescheinigung,
+          einen Kostenvoranschlag sowie einen Nachweis über die Qualifikation der
+          Fachkraft. Als DGE-zertifizierte Diätassistentin bin ich von den
+          Krankenkassen anerkannt. Für seltene Stoffwechselerkrankungen wie
+          Mukoviszidose oder Phenylketonurie gelten Sonderregelungen. Erfragen
+          Sie die genauen Bedingungen am besten vorab bei Ihrer Krankenkasse.
+        </p>
+
+        <p class="text-lg mt-8">
+          Eine Ernährungstherapie wirkt am besten in enger Abstimmung mit Ihrer
+          ärztlichen Behandlung – ich arbeite dafür mit Ärzten und Fachkräften
+          aus angrenzenden Bereichen zusammen. Ergänzend kann eine
+          <a class="underline text-primary-700" href="/bioelektrische-impedanzanalyse">Bioelektrische Impedanzanalyse</a>
+          Fortschritte sichtbar machen.
         </p>
       </div>
       <div
         class="flex flex-col lg:w-1/3 p-4 md:p-8 bg-white dark:bg-gray-800 dark:text-gray-300 rounded-lg shadow-xl"
       >
         <h2 class="lg:text-4xl text-2xl mb-5 font-extrabold">
-          Wem oder Wann kann eine Beratung Ihnen helfen?
+          Mögliche Anwendungsbereiche
         </h2>
         <ul>
           <li class="flex items-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="flex-none w-6 h-6 mr-4 text-therapie">
               <path fill="currentColor" d="M12 13H4v-2h8V4l8 8-8 8v-7z" /></svg
-            >Säuglinge und Kleinkinder
+            >Diabetes mellitus
           </li>
           <li class="flex items-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="flex-none w-6 h-6 mr-4 text-therapie">
               <path fill="currentColor" d="M12 13H4v-2h8V4l8 8-8 8v-7z" /></svg
-            >Schwangere und Stillende
+            >Adipositas (ab einem BMI von 30)
           </li>
           <li class="flex items-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="flex-none w-6 h-6 mr-4 text-therapie">
               <path fill="currentColor" d="M12 13H4v-2h8V4l8 8-8 8v-7z" /></svg
-            >Kinder und Jugendliche
+            >Erhöhte Blutfett- und Cholesterinwerte
           </li>
           <li class="flex items-center mb-4">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="flex-none w-6 h-6 mr-4 text-therapie">
               <path fill="currentColor" d="M12 13H4v-2h8V4l8 8-8 8v-7z" /></svg
-            >Sportler, sowie gesundheitsbewusste Senioren
+            >Lebensmittelallergien &amp; -unverträglichkeiten
+          </li>
+          <li class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="flex-none w-6 h-6 mr-4 text-therapie">
+              <path fill="currentColor" d="M12 13H4v-2h8V4l8 8-8 8v-7z" /></svg
+            >Reizdarm &amp; Magen-Darm-Beschwerden
+          </li>
+          <li class="flex items-center mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="flex-none w-6 h-6 mr-4 text-therapie">
+              <path fill="currentColor" d="M12 13H4v-2h8V4l8 8-8 8v-7z" /></svg
+            >Nierenerkrankungen
           </li>
           <li class="flex items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="flex-none w-6 h-6 mr-4 text-therapie">
               <path fill="currentColor" d="M12 13H4v-2h8V4l8 8-8 8v-7z" /></svg
-            >bei starker Beanspruchung in Berufs- und Privatleben
+            >Begleitende Ernährung bei Krebs
           </li>
         </ul>
         <a
           href="/kontakt"
-          class="inline-flex justify-center text-gray-100 bg-therapie mt-5 border-0 text-base py-2 px-3 lg:px-8 focus:outline-none hover:bg-therapie rounded-full lg:text-lg"
+          class="inline-flex justify-center max-w-max text-gray-100 bg-therapie mt-5 border-0 text-base py-2 px-3 lg:px-8 focus:outline-none hover:bg-therapie rounded-full lg:text-lg"
         >
           Termin vereinbaren
         </a>
       </div>
     </div>
   </section>
+
+  <Testimonials />
 
   <Services />
 </Default>

@@ -1,0 +1,60 @@
+---
+const reviews = [
+  {
+    name: 'Tina Zappe-Püthe',
+    source: 'Google Rezension',
+    text: 'Erstklassige Beratung – mit der Gewissheit, sich jederzeit mit seinen Problemen und Fragen an Frau Becker wenden zu können.',
+  },
+  {
+    name: 'Angela Ridderskamp',
+    source: 'Google Rezension',
+    text: 'Frau Becker versteht es zu motivieren. Mit wertvollen Tipps begleitet sie den Prozess und gewährleistet auch in nicht ganz so erfolgreichen Abschnitten stets die passende Unterstützung. Grundlegendes Ernährungswissen und körperliche Reaktionen auf die Nahrungsaufnahme werden anschaulich vermittelt.',
+  },
+];
+---
+
+<section class="bg-white dark:bg-gray-800">
+  <div class="max-w-5xl px-5 py-16 mx-auto">
+    <h2 class="text-3xl font-extrabold text-gray-900 dark:text-gray-100 mb-2 text-center">
+      Das sagen meine Klientinnen und Klienten
+    </h2>
+    <p class="text-gray-600 dark:text-gray-400 text-center mb-12">
+      Erfahrungen aus echten Beratungen – nachzulesen in den Google-Bewertungen.
+    </p>
+    <div class="grid gap-6 md:grid-cols-2">
+      {reviews.map((review) => (
+        <figure class="flex flex-col h-full bg-gray-50 dark:bg-gray-900 rounded-lg p-6 border border-gray-200 dark:border-gray-700">
+          <div class="flex mb-4" role="img" aria-label="Bewertung: 5 von 5 Sternen">
+            {[1, 2, 3, 4, 5].map(() => (
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5 text-yellow-400">
+                <path d="M9.05 2.93c.3-.92 1.6-.92 1.9 0l1.36 4.18a1 1 0 00.95.69h4.4c.97 0 1.37 1.25.59 1.81l-3.56 2.59a1 1 0 00-.36 1.12l1.36 4.18c.3.92-.76 1.69-1.54 1.12l-3.56-2.59a1 1 0 00-1.18 0l-3.56 2.59c-.78.57-1.84-.2-1.54-1.12l1.36-4.18a1 1 0 00-.36-1.12L1.4 9.61c-.78-.56-.38-1.81.59-1.81h4.4a1 1 0 00.95-.69l1.36-4.18z" />
+              </svg>
+            ))}
+          </div>
+          <blockquote class="text-gray-700 dark:text-gray-300 leading-relaxed grow">
+            „{review.text}“
+          </blockquote>
+          <figcaption class="mt-4 font-bold text-gray-900 dark:text-gray-100">
+            {review.name}
+            <span class="block text-sm font-normal text-gray-500 dark:text-gray-400">
+              {review.source}
+            </span>
+          </figcaption>
+        </figure>
+      ))}
+    </div>
+    <div class="text-center mt-10">
+      <a
+        href="https://share.google/UKBH8jVnB5p0JFATT"
+        target="_blank"
+        rel="noopener"
+        class="inline-flex items-center text-primary-700 dark:text-primary-500 font-semibold hover:underline"
+      >
+        Alle Bewertungen auf Google ansehen
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-5 h-5 ml-2">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+        </svg>
+      </a>
+    </div>
+  </div>
+</section>
